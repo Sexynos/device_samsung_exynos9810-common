@@ -14,7 +14,8 @@
 # limitations under the License.
 
 ### Extras
-SELINUX_IGNORE_NEVERALLOWS := true 
+SELINUX_IGNORE_NEVERALLOWS := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 COMMON_PATH := device/samsung/exynos9810-common
 
