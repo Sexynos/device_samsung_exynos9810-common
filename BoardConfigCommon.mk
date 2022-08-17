@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+### Extras
+SELINUX_IGNORE_NEVERALLOWS := true 
+
 COMMON_PATH := device/samsung/exynos9810-common
 
 BUILD_BROKEN_DUP_RULES := true
@@ -137,10 +140,10 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
-BOARD_SEPOLICY_TEE_FLAVOR := mobicore
-include device/samsung_slsi/sepolicy/sepolicy.mk
+# BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+# include device/samsung_slsi/sepolicy/sepolicy.mk
 
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+# BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 ## VNDK
 BOARD_VNDK_VERSION := current
