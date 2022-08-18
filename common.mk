@@ -297,10 +297,15 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio.config@1.1.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio@1.4.vendor:64 \
+    android.hardware.radio@1.3.vendor:64 \
+    android.hardware.radio@1.2.vendor:64 \
+    android.hardware.radio@1.1.vendor:64 \
+    android.hardware.radio@1.0.vendor:64 \
+    android.hardware.radio.config@1.0.vendor:64 \
+    android.hardware.radio.config@1.1.vendor:64 \
+    android.hardware.radio.config@1.2.vendor:64 \
+    android.hardware.radio.deprecated@1.0.vendor:64
 
 PRODUCT_PACKAGES += \
     secril_config_svc
