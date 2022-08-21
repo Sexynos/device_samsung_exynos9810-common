@@ -40,5 +40,8 @@
 # Audio (Soundtrigger)
 /dev/vts_fio_dev                                         u:object_r:vts_fio_device:s0
 
+# Exynos9810 HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.memtrack-service.example u:object_r:hal_memtrack_default_exec:s0
+
 ### VENDOR
 /(vendor|system/vendor)/bin/vendor\.samsung\.hardware\.security\.widevine\.keyprovisioning@[0-9].[0-9]-service     u:object_r:hal_drm_widevine_exec:s0
