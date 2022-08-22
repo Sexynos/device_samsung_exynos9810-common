@@ -12,15 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package {
-    // See: http://go/android-license-faq
-    // A large-scale-change added 'default_applicable_licenses' to import
-    // all of the 'license_kinds' from "hardware_interfaces_license"
-    // to get the below license kinds:
-    //   SPDX-license-identifier-Apache-2.0
-    default_applicable_licenses: ["hardware_interfaces_license"],
-}
-
 cc_defaults {
     name: "libhealth_aidl_common_defaults",
     shared_libs: [
@@ -132,9 +123,9 @@ cc_defaults {
 // AIDL version of android.hardware.health@2.1-service.
 // Default binder service of the health HAL.
 cc_defaults {
-    name: "android.hardware.health-service.example-defaults",
+    name: "android.hardware.health-service.exynos9810-defaults",
     relative_install_path: "hw",
-    vintf_fragments: ["android.hardware.health-service.example.xml"],
+    vintf_fragments: ["android.hardware.health-service.exynos9810.xml"],
     defaults: [
         "libhealth_aidl_impl_user",
     ],
@@ -145,17 +136,17 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "android.hardware.health-service.example",
+    name: "android.hardware.health-service.exynos9810",
     vendor: true,
-    defaults: ["android.hardware.health-service.example-defaults"],
-    init_rc: ["android.hardware.health-service.example.rc"],
+    defaults: ["android.hardware.health-service.exynos9810-defaults"],
+    init_rc: ["android.hardware.health-service.exynos9810.rc"],
     overrides: ["charger"],
 }
 
 cc_binary {
-    name: "android.hardware.health-service.example_recovery",
+    name: "android.hardware.health-service.exynos9810_recovery",
     recovery: true,
-    defaults: ["android.hardware.health-service.example-defaults"],
-    init_rc: ["android.hardware.health-service.example_recovery.rc"],
+    defaults: ["android.hardware.health-service.exynos9810-defaults"],
+    init_rc: ["android.hardware.health-service.exynos9810_recovery.rc"],
     overrides: ["charger.recovery"],
 }
